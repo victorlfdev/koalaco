@@ -44,7 +44,12 @@ export default function Header() {
         </nav>
 
         <div className="nav-cta">
-          <a href="#contato" className="btn btn-primary">
+          <a
+            href="https://wa.me/5511948569074?text=Olá! Gostaria de agendar um diagnóstico gratuito."
+            className="btn btn-primary"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Agendar diagnóstico gratuito
           </a>
           <button
