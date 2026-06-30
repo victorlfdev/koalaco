@@ -45,7 +45,7 @@ export default function Header() {
 
         <div className="nav-cta">
           <a
-            href="https://wa.me/5511948569074?text=Olá! Gostaria de agendar um diagnóstico gratuito."
+            href="https://wa.me/5511948569074?text=Olá! Vim pelo site Koala & Co. Gostaria de agendar um diagnóstico gratuito."
             className="btn btn-primary"
             target="_blank"
             rel="noopener noreferrer"
