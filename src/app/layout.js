@@ -35,6 +35,7 @@ export const metadata = {
     siteName: "Koala & Co",
     locale: "pt_BR",
     type: "website",
+    images: ["/OGKoalaCo.jpg"],
   },
   robots: {
     index: true,
