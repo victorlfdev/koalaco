@@ -4,6 +4,6 @@ export default function robots() {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://koalaco.com.br/sitemap.xml",
+    sitemap: "https://koalaco.vercel.app/sitemap.xml",
   };
 }

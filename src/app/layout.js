@@ -17,7 +17,7 @@ const inter = Inter({
 });
 
 export const metadata = {
-  metadataBase: new URL("https://koalaco.com.br"),
+  metadataBase: new URL("https://koalaco.vercel.app"),
   title: "Koala & Co | Marketing, Vendas e Tecnologia para Negócios Locais",
   description:
     "A Koala & Co une estratégia de marketing, conversão em vendas e desenvolvimento fullstack para colocar mais clientes na porta e mais vendas no WhatsApp do seu negócio local.",
@@ -31,7 +31,7 @@ export const metadata = {
     title: "Koala & Co | Mais clientes. Mais vendas.",
     description:
       "Marketing estratégico, vendas e tecnologia de ponta para negócios locais.",
-    url: "https://koalaco.com.br",
+    url: "https://koalaco.vercel.app",
     siteName: "Koala & Co",
     locale: "pt_BR",
     type: "website",
