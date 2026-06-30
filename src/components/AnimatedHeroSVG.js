@@ -178,29 +178,6 @@ export default function AnimatedHeroSVG() {
         fill="#FFC85D"
         opacity="0"
       />
-
-      {/* NODES (mantidos iguais) */}
-      <g ref={(el) => (nodesRef.current[0] = el)}>
-        <circle cx="70" cy="340" r="42" fill="#E7EAD9" />
-        <circle cx="70" cy="340" r="20" fill="#F6EDD8" />
-        <text x="70" y="397" textAnchor="middle" fontSize="12" fill="#5C624F">
-          Atenção
-        </text>
-      </g>
-
-      <g ref={(el) => (nodesRef.current[1] = el)}>
-        <circle cx="250" cy="190" r="46" fill="#4E652E" />
-        <text x="250" y="250" textAnchor="middle" fontSize="12" fill="#F4F0E9">
-          Landing Page
-        </text>
-      </g>
-
-      <g ref={(el) => (nodesRef.current[2] = el)}>
-        <circle cx="410" cy="90" r="40" fill="#E7EAD9" />
-        <text x="410" y="155" textAnchor="middle" fontSize="12" fill="#5C624F">
-          Conversão
-        </text>
-      </g>
     </svg>
   );
 }
