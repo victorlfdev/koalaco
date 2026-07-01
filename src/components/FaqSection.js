@@ -7,7 +7,7 @@ import Reveal from "./Reveal";
 const FAQ = [
   {
     q: "Em quanto tempo a landing page fica pronta?",
-    a: "O prazo varia com o escopo, mas projetos padrão saem do diagnóstico ao ar em poucas semanas, já com SEO e performance configurados.",
+    a: "O prazo varia com o escopo, mas projetos padrão saem do diagnóstico ao ar em  poucos dias, já com SEO e performance configurados.",
   },
   {
     q: "Preciso já ter logo e identidade visual prontos?",
@@ -52,7 +52,6 @@ export default function FaqSection() {
       <div className="container">
         <Reveal className="section-head">
           <span className="eyebrow">Perguntas frequentes</span>
-          <h2>Antes de falar com a gente, tire suas dúvidas.</h2>
         </Reveal>
 
         <Reveal as="div" className="faq-list" stagger={0.06}>
