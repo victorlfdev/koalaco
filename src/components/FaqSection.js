@@ -52,6 +52,7 @@ export default function FaqSection() {
       <div className="container">
         <Reveal className="section-head">
           <span className="eyebrow">Perguntas frequentes</span>
+          <h2 className="section-title">FAQ</h2>
         </Reveal>
 
         <Reveal as="div" className="faq-list" stagger={0.06}>
