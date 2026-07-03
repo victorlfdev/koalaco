@@ -37,7 +37,7 @@ export default function Footer() {
               <h4>Contato</h4>
               <a href="mailto:koalaco@gmail.com">koalaco@gmail.com</a>
               <a
-                href="https://wa.me/5511948569074?text=Olá! Vim pelo site Koala & Co. Gostaria de agendar um diagnóstico gratuito."
+                href="https://wa.me/5511952093370?text=Olá! Vim pelo site KoalaCo. Gostaria de agendar um diagnóstico gratuito."
                 target="_blank"
                 rel="noopener noreferrer"
               >
