@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import ProblemSolution from "@/components/ProblemSolution";
 import Services from "@/components/Services";
 import Method from "@/components/Method";
+import PortfolioCarousel from "@/components/PortfolioCarousel";
 import Team from "@/components/Team";
 import FaqSection from "@/components/FaqSection";
 import CtaBanner from "@/components/CtaBanner";
@@ -17,6 +18,7 @@ export default function Home() {
         <ProblemSolution />
         <Services />
         <Method />
+        <PortfolioCarousel />
         <Team />
         <FaqSection />
         <CtaBanner />

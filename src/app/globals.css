@@ -625,6 +625,273 @@ section {
   background: var(--color-primary);
 }
 
+/* === Portfolio Carousel === */
+.carousel-wrapper {
+  margin-top: 48px;
+}
+
+.carousel-container {
+  position: relative;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-lg);
+  padding: 40px 32px 100px 32px;
+  min-height: 520px;
+  width: min(90vw, 1400px);
+  max-width: 1400px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.carousel-slide {
+  will-change: transform, opacity;
+}
+
+@keyframes exitLeft {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-24px);
+  }
+}
+
+@keyframes exitRight {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(24px);
+  }
+}
+
+@keyframes enterFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes enterFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.carousel-slide.phase-exiting.dir-next {
+  animation: exitLeft 320ms ease forwards;
+}
+.carousel-slide.phase-exiting.dir-prev {
+  animation: exitRight 320ms ease forwards;
+}
+.carousel-slide.phase-entering.dir-next {
+  animation: enterFromRight 520ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+.carousel-slide.phase-entering.dir-prev {
+  animation: enterFromLeft 520ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.carousel-loading-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 20px;
+  background: rgba(250, 248, 245, 0.88);
+  color: var(--color-text-muted);
+  font-size: 15px;
+  z-index: 15;
+  backdrop-filter: blur(5px);
+}
+
+.carousel-loading-overlay::before {
+  content: "";
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 4px solid rgba(78, 101, 46, 0.2);
+  border-top-color: var(--color-primary);
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.slide-content {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 20px;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 24px;
+}
+
+@media (max-width: 1024px) {
+  .slide-content {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    align-items: center;
+    padding-bottom: 16px;
+  }
+}
+
+.slide-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 18px;
+  padding: 20px 36px 20px 36px;
+  align-self: center;
+  font-size: 28px;
+  color: var(--color-text);
+}
+
+.slide-info p {
+  font-size: 13px; /* smaller description for compactness */
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+.carousel-iframe {
+  width: 100%;
+  height: 800px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-line);
+  background: var(--color-bg);
+  transform: scale(1);
+  transform-origin: top center;
+  zoom: 0.65;
+  overflow: hidden;
+}
+
+@media (max-width: 1024px) {
+  .carousel-iframe {
+    height: 820px;
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 640px) {
+  .carousel-iframe {
+    height: 840px;
+    transform: scale(1);
+  }
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+  color: var(--color-text);
+  z-index: 10;
+}
+
+.carousel-button:hover {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-cream-on-dark);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-prev {
+  left: 16px;
+}
+
+.carousel-next {
+  right: 16px;
+}
+
+.carousel-button svg {
+  width: 24px;
+  height: 24px;
+}
+
+@media (max-width: 768px) {
+  .carousel-button {
+    width: 40px;
+    height: 40px;
+  }
+
+  .carousel-prev {
+    left: 8px;
+  }
+
+  .carousel-next {
+    right: 8px;
+  }
+}
+
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 28px;
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid var(--color-line-strong);
+  background: transparent;
+  cursor: pointer;
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.indicator:hover {
+  border-color: var(--color-primary);
+}
+
+.indicator.active {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.portfolio-nicho {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
 /* === Method === */
 .method {
   background: var(--color-bg-alt);
