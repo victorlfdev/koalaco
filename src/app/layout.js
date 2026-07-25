@@ -53,6 +53,9 @@ export default function RootLayout({ children }) {
     <html lang="pt-BR" className={`${outfit.variable} ${inter.variable}`}>
       <body>
         <LenisProvider>{children}</LenisProvider>
+{/* impeccable-live-start */}
+<script src="http://localhost:8401/live.js"></script>
+{/* impeccable-live-end */}
       </body>
     </html>
   );

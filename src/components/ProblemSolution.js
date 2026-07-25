@@ -37,7 +37,7 @@ export default function ProblemSolution() {
     <section id="diferenciais" className="problem section-pad">
       <div className="container">
         <Reveal className="section-head">
-          <span className="eyebrow">O problema do negócio local</span>
+          <span className="eyebrow">Do diagnóstico ao resultado</span>
           <h2>Visibilidade sem conversão é dinheiro queimado em anúncio.</h2>
           <p>
             A maioria das agências resolve só um pedaço do problema. A Koala
