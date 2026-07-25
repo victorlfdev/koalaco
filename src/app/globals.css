@@ -422,6 +422,13 @@ section {
   flex-wrap: wrap;
 }
 
+/* Hide scroll hint on mobile where the gap is tighter */
+@media (max-width: 640px) {
+  .hero-scroll-hint {
+    margin-top: 16px;
+  }
+}
+
 .hero-trust-item {
   display: flex;
   flex-direction: column;
@@ -449,6 +456,53 @@ section {
   border-radius: var(--radius-lg);
   padding: 28px;
   box-shadow: 0 30px 80px -40px rgba(47, 61, 28, 0.35);
+  transition: opacity 0.4s ease;
+}
+
+.hero-visual-frame.hero-loading {
+  opacity: 0.5;
+  background: var(--color-primary-soft);
+}
+
+.hero-skeleton {
+  width: 100%;
+  aspect-ratio: 480 / 420;
+  background: linear-gradient(135deg, var(--color-primary-soft), var(--color-primary-soft) 40%, var(--color-primary-soft) 60%, transparent);
+  border-radius: var(--radius-md);
+  animation: skeleton-pulse 1.2s ease-in-out infinite;
+}
+
+@keyframes skeleton-pulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 0.7; }
+}
+
+.hero-scroll-hint {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.hero-scroll-hint svg {
+  color: var(--color-primary);
+  opacity: 0.6;
+  animation: scroll-bounce 2s ease-in-out infinite;
+}
+
+@keyframes scroll-bounce {
+  0%, 100% { transform: translateY(0); opacity: 0.4; }
+  50% { transform: translateY(6px); opacity: 0.8; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-scroll-hint svg {
+    animation: none;
+    opacity: 0.5;
+  }
+  .hero-skeleton {
+    animation: none;
+    opacity: 0.6;
+  }
 }
 
 /* === Problem / Solution === */
